@@ -17,7 +17,8 @@ dict ={
     'ENV' : {
               'CXX':'clang++',
               'CC':'clang',
-              'TERM':'alacritty-direct',
+              'TERM':'alacritty',
+              'TERMINFO':'$HOME/.terminfo/',
               'RUSTUP_DIST_SERVER':'https://mirrors.tuna.tsinghua.edu.cn/rustup',
               'GOPROXY':'https://goproxy.cn'
         },
