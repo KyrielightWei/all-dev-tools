@@ -20,7 +20,9 @@ dict ={
               'TERM':'alacritty',
               'TERMINFO':'$HOME/.terminfo/',
               'RUSTUP_DIST_SERVER':'https://mirrors.tuna.tsinghua.edu.cn/rustup',
-              'GOPROXY':'https://goproxy.cn'
+              'GOPROXY':'https://goproxy.cn',
+	      'LANG' : 'C.UTF-8',
+              'LC_ALL': 'C.UTF-8'
         },
     'PATH' : {
             'git':'$ALL_DEV_ENV/git-install/bin/',
@@ -28,7 +30,7 @@ dict ={
             'clangd':'$ALL_DEV_ENV/clang+llvm/bin/',
             'nvim':'$ALL_DEV_ENV/',
             'gcc':'',
-            'go':'$ALL_DEV_ENV/bin/',
+            'go':'$ALL_DEV_ENV/go/bin/',
             'nodejs':'$ALL_DEV_ENV/node_js/bin/',
             'ctags':'$ALL_DEV_ENV/ctags-install/bin/',
             'gtags':'$ALL_DEV_ENV/gtags-install/bin/'
