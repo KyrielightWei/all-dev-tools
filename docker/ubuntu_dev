@@ -10,12 +10,10 @@ RUN apt-get update && \
     apt-get install -y proxychains-ng && \
     mkdir -p ~/tool && \
 ##  nvim config
-    cd ~/tool && \
     python3 -m pip install neovim-remote && \
     python3 -m pip install --user --upgrade pynvim && \
-    git clone https://github.com/PokemonWei/nvim-configuration.git && \
-    echo "source ~/tool/nvim-configuration/init.vim" >> /usr/share/nvim/sysinit.vim && \
-    nvim +PlugInstall +qall &&\
+    # git clone https://github.com/PokemonWei/nvim-configuration.git && \
+    # echo "source ~/tool/nvim-configuration/init.vim" >> /usr/share/nvim/sysinit.vim && \
     cd ~ && \
 ##  ctags
     git clone https://github.com/universal-ctags/ctags.git && \
@@ -31,6 +29,7 @@ RUN apt-get update && \
     git clone https://github.com/PokemonWei/all-dev-tools.git && \
     bash all-dev-tools\term\zsh_tmux_sys_init.sh && \
     bash all-dev-tools\term\ccls_sys_install.sh && \
+    bash all-dev-tools\term\nvim-init.sh && \
 ## alacritty  Dependencies
 	apt-get install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3 && \
 ## ssh
