@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y wget curl fuse sudo kmod vim python python3 python3-pip git subversion lua5.3 && \
 	apt-get install -y iputils-ping  rsync openssl libssl-dev libncurses-dev libreadline-dev libcurl4-openssl-dev libtirpc-dev flex bison unzip sysstat htop iotop net-tools && \
 	apt-get install -y libncurses5 libncurses5-dev && \
-    apt-get install -y zsh tmux neovim autoconf automake global nodejs npm && \
+    apt-get install -y zsh tmux neovim autoconf  pkg-config  automake global nodejs npm && \
     apt-get install -y proxychains-ng && \
     mkdir -p ~/tool && \
 ##  nvim config
