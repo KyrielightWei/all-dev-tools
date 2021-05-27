@@ -7,9 +7,3 @@ git clone https://github.com/tmux-plugins/tpm /root/.tmux/plugins/tpm && /root/.
 echo "source $term_dir/zshrc.zsh" >> ~/.zshrc
 
 git clone https://github.com/zdharma/zinit.git ~/.zinit
-
-zsh
-
-sleep 60
-
-exit

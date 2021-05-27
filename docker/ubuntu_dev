@@ -9,6 +9,12 @@ RUN apt-get update && \
     apt-get install -y zsh tmux neovim autoconf  pkg-config  automake global nodejs npm && \
     apt-get install -y proxychains-ng && \
     mkdir -p ~/tool && \
+##  v2ray
+    mkdir v2ray && \
+    cd v2ray && \
+    wget https://github.com/v2fly/v2ray-core/releases/download/v4.39.2/v2ray-linux-64.zip && \
+    unzip v2ray-linux-64.zip && \
+    cd .. && \
 ##  nvim config
     wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz && \
     tar -zxvf nvim-linux64.tar.gz && \
