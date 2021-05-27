@@ -8,4 +8,4 @@ echo "source $term_dir/zshrc.zsh" >> ~/.zshrc
 
 git clone https://github.com/zdharma/zinit.git ~/.zinit
 
-nohup zsh ~/.zshrc > ～/zsh_ini.log 2>&1 &
+nohup zsh ~/.zshrc &
