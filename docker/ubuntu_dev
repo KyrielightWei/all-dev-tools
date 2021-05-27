@@ -27,9 +27,9 @@ RUN apt-get update && \
 ## tmux & zsh
     cd ~/tool && \
     git clone https://github.com/PokemonWei/all-dev-tools.git && \
-    bash all-dev-tools\term\zsh_tmux_sys_init.sh && \
-    bash all-dev-tools\term\ccls_sys_install.sh && \
-    bash all-dev-tools\term\nvim-init.sh && \
+    bash all-dev-tools/term/zsh_tmux_sys_init.sh && \
+    bash all-dev-tools/term/ccls_sys_install.sh && \
+    bash all-dev-tools/term/nvim-init.sh && \
 ## alacritty  Dependencies
 	apt-get install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3 && \
 ## ssh
