@@ -10,6 +10,12 @@ RUN apt-get update && \
     apt-get install -y proxychains-ng && \
     mkdir -p ~/tool && \
 ##  nvim config
+    wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz && \
+    tar -zxvf nvim-linux64.tar.gz && \
+    mv nvim-linux64/bin/* /usr/local/bin/ && \
+    mv nvim-linux64/share/* /usr/local/share/ && \
+    mv nvim-linux64/lib/* /usr/local/lib/ && \
+    rm -rf nvim-linux64* && \
     python3 -m pip install neovim-remote && \
     python3 -m pip install --user --upgrade pynvim && \
     # git clone https://github.com/PokemonWei/nvim-configuration.git && \
