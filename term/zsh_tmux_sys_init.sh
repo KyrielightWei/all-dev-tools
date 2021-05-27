@@ -8,4 +8,8 @@ echo "source $term_dir/zshrc.zsh" >> ~/.zshrc
 
 git clone https://github.com/zdharma/zinit.git ~/.zinit
 
-nohup zsh ~/.zshrc &
+zsh
+
+sleep 60
+
+exit
