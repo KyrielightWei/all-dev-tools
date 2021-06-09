@@ -9,6 +9,7 @@ RUN apt-get update && \
     apt-get install -y zsh tmux neovim autoconf  pkg-config  automake global nodejs npm && \
     apt-get install -y proxychains-ng && \
     mkdir -p ~/tool && \
+    cd ~/tool && \
 ##  v2ray
     mkdir v2ray && \
     cd v2ray && \
