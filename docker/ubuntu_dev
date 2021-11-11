@@ -26,6 +26,7 @@ RUN apt-get update && \
     python3 -m pip install neovim-remote && \
     python3 -m pip install --user --upgrade pynvim && \
     git clone https://github.com/PokemonWei/nvim-configuration.git && \
+    mkdir -p ~/.config/nvim && \
     echo "source ~/tool/nvim-configuration/init.vim" >> ~/.config/nvim/init.vim && \
     cd ~ && \
 ##  ctags
