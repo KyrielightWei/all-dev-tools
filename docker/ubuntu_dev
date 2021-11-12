@@ -46,7 +46,6 @@ RUN apt-get update && \
     mv ./bin/* /usr/local/bin/ && \
     mv ./lib/* /usr/local/lib/ && \
     mv ./include/* /usr/local/include/ && \
-    mv ./share/* /usr/local/share/ && \
     cd .. && \
     rm -rf node-v16.13.0-linux-x64 && \
 ## tmux & zsh
