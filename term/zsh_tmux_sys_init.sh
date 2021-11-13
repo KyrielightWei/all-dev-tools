@@ -6,4 +6,4 @@ git clone https://github.com/tmux-plugins/tpm /root/.tmux/plugins/tpm && /root/.
 
 echo "source $term_dir/zshrc.zsh" >> ~/.zshrc
 
-git clone https://github.com/zdharma/zinit.git ~/.zinit
+git clone https://github.com/zdharma-continuum/zinit.git ~/.zinit
