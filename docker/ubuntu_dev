@@ -43,7 +43,7 @@ RUN apt-get update && \
     wget https://nodejs.org/dist/v16.13.0/node-v16.13.0-linux-x64.tar.xz && \
     tar -xvf node-v16.13.0-linux-x64.tar.xz && \
     mv node-v16.13.0-linux-x64 nodejs && \
-    echo "export PATH="$HOME/tool/nodejs/bin:$PATH" >> ~/.bashrc && \
+    echo "export PATH=\"$HOME/tool/nodejs/bin:$PATH\"" >> ~/.bashrc && \
     rm -f node-v16.13.0-linux-x64.tar.gz && \
 ## tmux & zsh
     cd ~/tool && \
