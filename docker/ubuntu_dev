@@ -47,7 +47,7 @@ RUN apt-get update && \
     mv nodejs/lib/* /usr/local/lib/ && \
     mv nodejs/include/* /usr/local/include/ && \
     rm -f node-v16.13.0-linux-x64.tar.xz && \
-    rm rf nodejs && \
+    rm -rf nodejs && \
 ##  Go
     cd ~/tool && \
     wget https://golang.org/dl/go1.17.3.linux-amd64.tar.gz && \
