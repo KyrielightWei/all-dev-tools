@@ -52,9 +52,9 @@ RUN apt-get update && \
     cd ~/tool && \
     wget https://golang.org/dl/go1.17.3.linux-amd64.tar.gz && \
     tar -zxvf go1.17.3.linux-amd64.tar.gz && \
-    echo 'export GOROOT=\"$HOME/tool/go\"' >> ~/.bashrc && \
-    echo 'export GOPATH=\"$HOME/gowork/\"' >> ~/.bashrc && \
-    echo 'export PATH=\"$GOROOT/bin:$GOPATH/bin:$PATH\"' >> ~/.bashrc && \
+    echo 'export GOROOT="$HOME/tool/go"' >> ~/.bashrc && \
+    echo 'export GOPATH="$HOME/gowork/"' >> ~/.bashrc && \
+    echo 'export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"' >> ~/.bashrc && \
     rm -f go1.17.3.linux-amd64.tar.gz && \
 ## Bear
     cd ~/tool && \
