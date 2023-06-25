@@ -11,11 +11,11 @@ RUN apt-get update && \
     mkdir -p ~/tool && \
     cd ~/tool && \
 ##  v2ray
-    mkdir v2ray && \
-    cd v2ray && \
-    wget https://github.com/v2fly/v2ray-core/releases/download/v4.39.2/v2ray-linux-64.zip && \
-    unzip v2ray-linux-64.zip && \
-    cd .. && \
+    # mkdir v2ray && \
+    # cd v2ray && \
+    # wget https://github.com/v2fly/v2ray-core/releases/download/v4.39.2/v2ray-linux-64.zip && \
+    # unzip v2ray-linux-64.zip && \
+    # cd .. && \
 ##  nvim config
     wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz && \
     tar -zxvf nvim-linux64.tar.gz && \
@@ -25,9 +25,9 @@ RUN apt-get update && \
     rm -rf nvim-linux64* && \
     python3 -m pip install neovim-remote && \
     python3 -m pip install --user --upgrade pynvim && \
-    git clone https://github.com/PokemonWei/nvim-configuration.git && \
+    git clone https://github.com/KyrielightWei/GoodraNvim.git && \
     mkdir -p ~/.config/nvim && \
-    echo "source ~/tool/nvim-configuration/init.vim" >> ~/.config/nvim/init.vim && \
+    echo "source ~/tool/GoodraNvim/init.vim" >> ~/.config/nvim/init.vim && \
     cd ~ && \
 ##  ctags
     git clone https://github.com/universal-ctags/ctags.git && \
@@ -38,16 +38,21 @@ RUN apt-get update && \
     make install &&\
     cd .. && \
     rm -rf ctags && \
+##  greenplum pre
+    apt-get install -y bison ccache cmake curl flex git-core gcc g++ inetutils-ping krb5-kdc krb5-admin-server libapr1-dev && \
+    apt-get install -y libbz2-dev libcurl4-gnutls-dev libevent-dev libkrb5-dev libpam-dev libperl-dev libreadline-dev libssl-dev && \
+    apt-get install -y libxerces-c-dev libxml2-dev libyaml-dev libzstd-dev locales net-tools ninja-build openssh-client openssh-server && \
+    apt-get install -y openssl pkg-config python3-dev python3-pip python3-psutil python3-pygresql python3-yaml zlib1g-dev && \
 ##  nodejs
-    cd ~/tool && \
-    wget https://nodejs.org/dist/v16.13.0/node-v16.13.0-linux-x64.tar.xz && \
-    tar -xvf node-v16.13.0-linux-x64.tar.xz && \
-    mv node-v16.13.0-linux-x64 nodejs && \
-    mv nodejs/bin/* /usr/local/bin/ &&  \
-    mv nodejs/lib/* /usr/local/lib/ && \
-    mv nodejs/include/* /usr/local/include/ && \
-    rm -f node-v16.13.0-linux-x64.tar.xz && \
-    rm -rf nodejs && \
+    # cd ~/tool && \
+    # wget https://nodejs.org/dist/v16.13.0/node-v16.13.0-linux-x64.tar.xz && \
+    # tar -xvf node-v16.13.0-linux-x64.tar.xz && \
+    # mv node-v16.13.0-linux-x64 nodejs && \
+    # mv nodejs/bin/* /usr/local/bin/ &&  \
+    # mv nodejs/lib/* /usr/local/lib/ && \
+    # mv nodejs/include/* /usr/local/include/ && \
+    # rm -f node-v16.13.0-linux-x64.tar.xz && \
+    # rm -rf nodejs && \
 ##  Go
     cd ~/tool && \
     wget https://golang.org/dl/go1.17.3.linux-amd64.tar.gz && \
