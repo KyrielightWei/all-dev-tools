@@ -3,15 +3,15 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y build-essential cmake clangd llvm clang libclang-dev && \
-    apt-get install -y wget curl fuse sudo kmod vim python3 python3-pip git subversion lua5.3 && \
+    apt-get install -y wget curl fuse sudo kmod vim python3 python3-pip git subversion lua5.1 && \
 	apt-get install -y iputils-ping  rsync openssl libssl-dev libncurses-dev libreadline-dev libcurl4-openssl-dev libtirpc-dev flex bison unzip sysstat htop iotop net-tools && \
-	apt-get install -y libncurses5 libncurses5-dev && \
+	apt-get install -y libncurses6 libncurses-dev && \
     apt-get install -y zsh tmux neovim autoconf  pkg-config  automake global nodejs npm && \
     apt-get install -y proxychains-ng && \
     mkdir -p ~/tool && \
     cd ~/tool && \
 ##  nvim config
-    wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz && \
+    wget https://github.com/neovim/neovim/releases/download/v0.11.2/nvim-linux-x86_64.tar.gz && \
     tar -zxvf nvim-linux64.tar.gz && \
     mv nvim-linux64/bin/* /usr/local/bin/ && \
     mv nvim-linux64/share/* /usr/local/share/ && \
@@ -58,19 +58,20 @@ RUN apt-get update && \
 ## Bear
     cd ~/tool && \
     apt-get install -y libfmt-dev libspdlog-dev nlohmann-json3-dev libgrpc++-dev protobuf-compiler-grpc libssl-dev && \
-    wget https://github.com/rizsotto/Bear/archive/refs/tags/3.0.17.zip && \
-    unzip 3.0.17.zip && \
-    cd Bear-3.0.17 && \
+    wget https://github.com/rizsotto/Bear/archive/refs/tags/3.1.6.zip && \
+    unzip 3.1.6.zip && \
+    cd Bear-3.1.6 && \
     cmake -DENABLE_UNIT_TESTS=OFF -DENABLE_FUNC_TESTS=OFF . && \
     make all && \
     make install && \
     cd .. && \
     rm -rf Bear-3.0.17 3.0.17.zip && \
+    wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.10/mihomo-linux-amd64-compatible-v1.19.10.gz && \
 ## tmux & zsh
-    cd ~/tool && \
-    git clone https://github.com/PokemonWei/all-dev-tools.git && \
-    bash all-dev-tools/term/zsh_tmux_sys_init.sh && \
-    bash all-dev-tools/term/ccls_sys_install.sh && \
+    #cd ~/tool && \
+    #git clone https://github.com/PokemonWei/all-dev-tools.git && \
+    #bash all-dev-tools/term/zsh_tmux_sys_init.sh && \
+    #bash all-dev-tools/term/ccls_sys_install.sh && \
     # bash all-dev-tools/term/nvim-init.sh && \
 ## alacritty  Dependencies
 	#apt-get install -y cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3 && \
