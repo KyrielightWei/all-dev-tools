@@ -1,3 +1,4 @@
+## Ubuntu
 FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
@@ -12,10 +13,10 @@ RUN apt-get update && \
     cd ~/tool && \
 ##  nvim config
     wget https://github.com/neovim/neovim/releases/download/v0.11.2/nvim-linux-x86_64.tar.gz && \
-    tar -zxvf nvim-linux64.tar.gz && \
-    mv nvim-linux64/bin/* /usr/local/bin/ && \
-    mv nvim-linux64/share/* /usr/local/share/ && \
-    mv nvim-linux64/lib/* /usr/local/lib/ && \
+    tar -zxvf nvim-linux-x86_64.tar.gz && \
+    mv nvim-linux-x86_64/bin/* /usr/local/bin/ && \
+    mv nvim-linux-x86_64/share/* /usr/local/share/ && \
+    mv nvim-linux-x86_64/lib/* /usr/local/lib/ && \
     rm -rf nvim-linux64* && \
     python3 -m pip install neovim-remote && \
     python3 -m pip install --user --upgrade pynvim && \
@@ -65,8 +66,8 @@ RUN apt-get update && \
     make all && \
     make install && \
     cd .. && \
-    rm -rf Bear-3.0.17 3.0.17.zip && \
-    wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.10/mihomo-linux-amd64-compatible-v1.19.10.gz && \
+    rm -rf Bear-3.1.6 3.1.6.zip && \
+	wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.10/mihomo-linux-amd64-compatible-v1.19.10.gz && /
 ## tmux & zsh
     #cd ~/tool && \
     #git clone https://github.com/PokemonWei/all-dev-tools.git && \
@@ -86,3 +87,4 @@ RUN apt-get update && \
     /usr/bin/ssh-keygen -A && \
     mkdir -p /run/sshd
 CMD ["/usr/sbin/sshd"]
+
