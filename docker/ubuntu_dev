@@ -67,7 +67,7 @@ RUN apt-get update && \
     make install && \
     cd .. && \
     rm -rf Bear-3.1.6 3.1.6.zip && \
-	wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.10/mihomo-linux-amd64-compatible-v1.19.10.gz && /
+    wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.10/mihomo-linux-amd64-compatible-v1.19.10.gz && \
 ## tmux & zsh
     #cd ~/tool && \
     #git clone https://github.com/PokemonWei/all-dev-tools.git && \
