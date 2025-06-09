@@ -18,8 +18,8 @@ RUN apt-get update && \
     mv nvim-linux-x86_64/share/* /usr/local/share/ && \
     mv nvim-linux-x86_64/lib/* /usr/local/lib/ && \
     rm -rf nvim-linux64* && \
-    python3 -m pip install neovim-remote && \
-    python3 -m pip install --user --upgrade pynvim && \
+    # python3 -m pip install neovim-remote && \
+    # python3 -m pip install --user --upgrade pynvim && \
     git clone https://github.com/KyrielightWei/GoodraNvim.git && \
     mkdir -p ~/.config/nvim && \
     echo "source ~/tool/GoodraNvim/init.vim" >> ~/.config/nvim/init.vim && \
